@@ -27,7 +27,10 @@ class CustomDialClient(BaseClient):
         request_data = {
             "messages": [msg.to_dict() for msg in messages]
         }
-    
+
+        # print("request:")
+        # print (request_data)
+
         # 3. Make POST request using requests.post() with:
         #   - URL: self._endpoint
         #   - headers: headers from step 1
@@ -38,6 +41,8 @@ class CustomDialClient(BaseClient):
         # 5. If status code != 200 then raise Exception with format: f"HTTP {response.status_code}: {response.text}"
         if response.status_code == 200:
             data = response.json()
+            # print("response:")
+            # print(data)
             choices = data.get("choices", [])
             if choices:
                 content = choices[0].get("message", {}).get("content")

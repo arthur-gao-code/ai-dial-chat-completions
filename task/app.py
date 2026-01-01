@@ -59,5 +59,5 @@ async def start(stream: bool) -> None:
 
 
 asyncio.run(
-    start(True)
+    start(False)
 )

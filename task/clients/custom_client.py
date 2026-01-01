@@ -2,16 +2,13 @@ import json
 import aiohttp
 import requests
 
-from task.clients.base import BaseClient
-from task.constants import DIAL_ENDPOINT
-from task.models.message import Message
-from task.models.role import Role
+from clients.base import BaseClient
+from constants import DIAL_ENDPOINT
+from models.message import Message
+from models.role import Role
 
 
-class CustomDialClient:
-    _endpoint: str
-    _api_key: str
-
+class CustomDialClient(BaseClient):
     def __init__(self, deployment_name: str):
         super().__init__(deployment_name)
         self._endpoint = DIAL_ENDPOINT + f"/openai/deployments/{deployment_name}/chat/completions"

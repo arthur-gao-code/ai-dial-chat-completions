@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from task.models.role import Role
+from models.role import Role
 
 
 @dataclass

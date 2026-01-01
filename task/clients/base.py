@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
-from task.constants import API_KEY
-from task.models.message import Message
+from constants import API_KEY
+from models.message import Message
 
 
 class BaseClient(ABC):

@@ -15,12 +15,12 @@ async def start(stream: bool) -> None:
     #  you can import Postman collection to make a request, file in the project root `dial-basics.postman_collection.json`
     #  don't forget to add your API_KEY)
     dial_client = DialClient(
-        deployment_name='gpt-5.2-2025-12-11',
+        deployment_name='gpt-4o',
     )
 
     # 1.2. Create CustomDialClient
     custom_dial_client = CustomDialClient(
-        deployment_name='gpt-5.2-2025-12-11',
+        deployment_name='gpt-4o',
     )
 
     # 2. Create Conversation object

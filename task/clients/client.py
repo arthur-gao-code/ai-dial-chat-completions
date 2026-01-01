@@ -1,9 +1,9 @@
 from aidial_client import Dial, AsyncDial
 
-from task.clients.base import BaseClient
-from task.constants import DIAL_ENDPOINT
-from task.models.message import Message
-from task.models.role import Role
+from clients.base import BaseClient
+from constants import DIAL_ENDPOINT
+from models.message import Message
+from models.role import Role
 
 
 class DialClient(BaseClient):
